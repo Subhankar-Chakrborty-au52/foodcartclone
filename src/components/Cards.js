@@ -26,14 +26,15 @@ const Cards = () => {
                   style={{ height: "15rem" }}
                   className="mt-3"
                 />
-                <Card.Header>Header</Card.Header>
+                <Card.Header>{element.address}</Card.Header>
                 <Card.Body>
                   <Card.Title>{element.rname}</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Card.Text> Price: ₹{element.price}</Card.Text>
+                  <div className="button_div d-flex justify-content-center">
+                    <Button variant="primary" className="col-lg-12">
+                      Add to Cart
+                    </Button>
+                  </div>
                 </Card.Body>
               </Card>
             </>
