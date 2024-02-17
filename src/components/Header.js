@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Header = () => {
-  const getData = useSelector((state) => state.cartreducer);
+  const getData = useSelector((state) => state.cartreducer.carts);
 
   console.log(getData);
 
@@ -35,7 +35,7 @@ const Header = () => {
           </Nav>
 
           <Badge
-            badgeContent={4}
+            badgeContent={getData.length}
             color="primary"
             id="basic-button"
             aria-controls={open ? "basic-menu" : undefined}
